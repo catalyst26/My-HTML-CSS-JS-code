@@ -1,54 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Title of the document</title>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <meta charset="UTF-8">
-
+<title>HTML Cheat Sheet</title>
 </head>
 
 <body>
-<!-- You dont want to wrap everything in container, you dont want everything pushed over to the middle. You want the header  & navbar background color to span the entire width, but the content to be in the container -->
-    <header id="main-header">
-        <div class="container">
-            <h1>My Website <!-- Our Logo --></h1>
-        </div>
-    </header>
-    
-    <nav id="navbar">
-        <div class="container">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Main showcase area-->
-    <section id="showcase">
-        <div class="container">
-            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed luctus diam. Proin a tincidunt nisi. </h1></div>
-    </section> 
-    <div class="container">  
-    <section id="main">
-            <h1>Welcome</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed luctus diam. Proin a tincidunt nisi. Suspendisse mollis, magna at fringilla egestas, nisl ante vestibulum turpis, vestibulum egestas leo orci in dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eu convallis justo. Nunc mi metus, tempus at magna et, ullamcorper eleifend ex.</p>
+    <a href="blog.html">Go to Blog</a>
+    
+    <!-- Headings -->
+    <h1>Heading One</h1>
+    <h2>Heading Two</h2>
+    <h3>Heading Three</h3>
+    <h4>Heading Four</h4>
+    <h5>Heading Five</h5>
+    <h6>Heading Six</h6>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec ipsum turpis. Quisque sodales lacus sit amet luctus varius. Morbi lobortis, <!-- Makes text bold --><strong>sapien sit amet pretium vehicula, libero dolor vulputate velit,</strong> at elementum ante sapien a tortor. Cras finibus, sem in pellentesque iaculis, augue diam viverra lectus, eu suscipit dolor lectus tincidunt metus. Suspendisse a justo velit. In dui mauris, tincidunt ac mi eget, lobortis <!-- emphasize text, makes italic--><em>lacinia massa.</em> Suspendisse id malesuada neque, ac tincidunt massa. Quisque id dictum magna. Morbi molestie ligula quis imperdiet malesuada. Vestibulum et malesuada massa. Nunc turpis nulla, placerat quis tempor et, viverra eget ligula. Nam a metus est.</p>
+    
+    <p>Etiam porttitor dapibus ligula, eu viverra justo consectetur quis. Nulla eu orci sit amet odio imperdiet efficitur. Sed ipsum libero, <a href="http://google.com" target="_blank"><!-- Link to page w/ a-tag and open new tab instead of opening in the same tab. When directing traffic away from your website. -->sagittis et rhoncus nec,</a> feugiat vel lectus. Donec mollis tortor vel orci elementum mollis. Sed eu sagittis quam, fermentum lobortis sem. Nullam tristique bibendum nulla, vel porttitor turpis tempus nec. Aliquam erat volutpat. Aenean nibh massa, bibendum eget mi eget, convallis ultricies risus. Vestibulum non felis placerat diam aliquam lobortis. Morbi et magna quis dolor varius volutpat eget eu erat. Nunc vitae euismod lacus. Duis hendrerit vulputate finibus. Sed finibus ligula eu lectus consectetur, vitae porttitor justo molestie.</p>
+    
+    <!-- Lists -->
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+    </ul>
+    
+     <ol>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+    </ol>
+    
+    <!-- Tables (List of customers, etc. for tabular data only, not recommended for browser layout) -->
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        
+        </thead>
+        <tbody>
+            <tr>
+                <td>Gregory Francois</td>
+                <td>greg@something.com</td>
+                <td>26</td>
+            </tr>
             
-    </section>
+            <tr>
+                <td>Sara Williams</td>
+                <td>billy@something.com</td>
+                <td>25</td>
+            </tr>
+            
+            <tr>
+                <td>John Doe</td>
+                <td>john@something.com</td>
+                <td>67</td>
+            </tr>
+        </tbody>
+    </table>
     
-    <aside id="sidebar">
-            <div class="container">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed luctus diam. Proin a tincidunt nisi. </p>
-            </div>
-    </aside>
-    </div>
+    <br>
+    <hr>
+    <br>
     
-    <footer id="main-footer"><div class="container"> Copyright &copy; 2018 My Website</div></footer>
+    <!-- Forms (for functionality, need PHP or other dynamic lang -->
+    <!-- action: submits form to a certain page, like php page on server Newspaper or registration form. POST method: used to "post" request to server, add data to DB, secure opposed to GET. With "GET", you can see the data in the URL. Good for search requests, wherever your not adding data  -->
+    <form action="process.php" method="POST">
     
-    <div style="margin-top:500px"></div>
-
+        <div>
+        <label>First Name</label>
+        <input type="text" name="firstName" placeholder="Enter first name">
+            <!-- Text usually most common; If being submitted to php file, "name" attribute is how we grab the value of what's submitted-->
+        </div>
+        <br>
+        <div>
+            <label>Last Name</label>
+            <input type="text" name="lastName">
+            <!-- "camelCase: first letter lower, after that upper first letters -->
+        </div>
+        <br>
+        <div>
+            <label>Email</label>
+            <input type="email" name="email">
+            <!-- With HTML5, new type of "email", adds some validation without JS. If email address is not valid with type of "email", an error will popup-->
+        </div>
+        <br>
+        
+        <div>
+            <label>Message</label>
+            <br>
+            <textarea name="message" ></textarea>
+            <!-- name for server side file; Has its own tag, with bigger text input area -->
+        </div>
+        <br>
+        
+        <div>
+            <label>Gender</label>
+            <select name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other" style="">Other</option>
+            </select><!-- Select lists to choose between options; each select has a couple options & value with each option & actual text that's displayed-->
+        </div>
+        <br>
+        <div>
+            <label>Age</label>
+            <input type="number" name="age" value="26">
+            <!-- "value" adds predefined values into our inputs, type="number" adds up & down age selectors-->
+        </div>
+        <br>
+        <div>
+            <label>Birthday:</label>
+            <input type="date" name="birthday">
+            <!-- date type provides format and date selector -->
+        </div>
+        <br>
+        <input type="submit" name="submit" value="Submit">
+        <!-- "value" is the actual button text -->   
+    </form>
+    
+    <!-- Buttons outside forms, with Button tag. Must use JS, add an event (click="some function") for any functionality -->
+    <button>Click Me</button>
+    
+    <!-- Images -->
+    <!-- "alt" to display alternate text if photo cannot load for whatever reason. A way to tell what the picture is when it fails to load, or can't be found. -->
+    <br>
+    <!-- Use CSS for width/height. Adjustments available here; changing width leaves height at "auto", and picture will still look good; a href= pointing to the file location of the image will open up images in a new tab in the browser when clicked. Browsers can open up html, image files and others-->
+    <a href="images/sample.jpg" target="_blank" >
+    <img src="images/sample.jpg" alt="My Sample Image" width="200px"></a>
+    
+    <!-- Quotations (blockquote, abbreviate, cite) -->
+    <blockquote cite="http://google.com"><!-- Adds some padding, little styling-->
+        Nullam tristique bibendum nulla, vel porttitor turpis tempus nec. Aliquam erat volutpat. Aenean nibh massa, bibendum eget mi eget, convallis ultricies risus.
+        
+    </blockquote>
+    
+    <!-- Allows pop up text to be displayed when you hover over text between abbr title="" tag.-->
+    <p>The <abbr title="Team Workout">T-DUB</abbr> is awesome!</p>
+    
+    <!-- Gives italic style, semantic to let browser know what's being cited -->
+    <p><cite>HTML Crash Course</cite> by Greg Francois</p>
+    <div style="margin-top: 500px"><!-- Adds visual space so we don't have to read the bottom of the page at the bottom of the screen. --></div>
+    
 </body>
 
 </html>
