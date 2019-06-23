@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Visuals By Adeyeye</title>
+        <meta name="Visuals By Adeyeye" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="CSS/cd_VBA.css">
+        
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+            <h1 id="head">Official Launch of Visuals By Adeyeye</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            <p id="demo"></p>
+            <ul>
+                <li><span id="days">Days</span></li>
+                <li><span id="hours">Hours</span></li>
+                <li><span id="minutes">Minutes</span></li>
+                <li><span id="seconds">Seconds</span></li>
+            </ul>
+            
+            
+            <audio id="" controls autoplay loop>
+                <source src="media/audio/rightnow.mp3" type="audio/mpeg">Your browser doesn't support the audio tag.
+            </audio>
+
+        </div>
+        
+        <script>
+            var deadline = new Date("Jun 30, 2019 20:10:45").getTime();
+            var x = setInterval(function(){
+            var now = new Date().getTime();
+            var t = deadline - now;
+            var days = Math.floor(t/ (1000 * 60 * 60 * 24));
+            document.getElementById("days").innerHTML = "days: " + days;
+            var hours = Math.floor((t % (1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+            var minutes = Math.floor((t % (1000 * 60 * 60 )) / (1000 * 60));
+            var seconds = Math.floor((t % (1000 * 60)) / 1000);
+
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+                if (t < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "EXPIRED";
+                    document.getElementById("demo").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+
+        </script>
+    </body>
+</html>
